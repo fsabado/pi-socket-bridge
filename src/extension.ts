@@ -538,3 +538,7 @@ export default function (pi: ExtensionAPI) {
     connections.clear();
   }));
 }
+
+// ── Testable exports ──────────────────────────────────────────────────────────
+export { handleRequest, rpcOk, rpcErr, rpcNotify, loadRegistry, writeRegistry, unregisterSession };
+export type { JsonRpcRequest, Connection, Registry };

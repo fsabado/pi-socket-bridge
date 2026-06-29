@@ -2,22 +2,33 @@
   "name": "pi-socket-bridge",
   "version": "0.1.0",
   "type": "module",
-  "description": "Pi extension — exposes the full ExtensionAPI/ExtensionContext over a per-session Unix socket using JSON-RPC 2.0",
-  "keywords": ["pi-package"],
+  "description": "Pi extension \u2014 exposes the full ExtensionAPI/ExtensionContext over a per-session Unix socket using JSON-RPC 2.0",
+  "keywords": [
+    "pi-package"
+  ],
   "author": "fsabado",
   "license": "MIT",
   "bin": {
     "pi-socket-client": "./bin/pi-socket-client.mjs"
   },
   "pi": {
-    "extensions": ["./src/extension.ts"]
+    "extensions": [
+      "./src/extension.ts"
+    ]
   },
   "files": [
     "src/",
     "bin/",
     "README.md"
   ],
+  "scripts": {
+    "test": "vitest run",
+    "test:install": "npm install --legacy-peer-deps"
+  },
   "peerDependencies": {
     "@earendil-works/pi-coding-agent": "*"
+  },
+  "devDependencies": {
+    "vitest": "2.1.9"
   }
 }
